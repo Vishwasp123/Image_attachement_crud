@@ -1,0 +1,7 @@
+<%= form_with url: replace_image_admin_new_update_path(params[:id], image_id: @image_id), method: :patch, local: true do |f| %>
+  <div style="margin-bottom: 20px;">
+    <label for="new_image" style="font-weight: bold;">Select New Image:</label>
+    <%= f.file_field :new_image, required: true %>
+  </div>
+  <%= f.submit "Replace Image", class: "button", style: "background-color: #007BFF; color: white;" %>
+<% end %>
